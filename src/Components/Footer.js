@@ -1,20 +1,32 @@
 import React from 'react';
 import styled from 'styled-components'
+import {faEnvelope, faMapMarkerAlt, faPhone} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 const Footer = () => {
     return (
         <FooterContainer className='main-footer'>
             <div className="footer-middle">
-                <div className="container-fluid">
+                <div className="container">
                     <div className="row">
                         {/*column 1*/}
                         <div className=".col-md-3 col-sm-6 col-lg-3">
-                            <h4>Contacts</h4>
+                            <h4 className='mb-3'>About us</h4>
                             <ul className='list-unstyled'>
-                                <li>Lorem ipsum dolor.</li>
-                                <li>Lorem ipsum dolor.</li>
-                                <li>Lorem ipsum dolor.</li>
-                                <li>Lorem ipsum dolor.</li>
+                                <li>
+                                    <FontAwesomeIcon className='mr-2' icon={faMapMarkerAlt}/>
+                                    <b>Location</b>
+                                    <p>Moscow, Kaluga, Tula</p>
+                                </li>
+                                <li><FontAwesomeIcon className='mr-2' icon={faEnvelope}/>
+                                    <b>Have any questions?</b>
+                                    <p>sombra-design@info.ru</p>
+                                </li>
+                                <li>
+                                    <FontAwesomeIcon className='mr-2' icon={faPhone}/>
+                                    <b>Phone</b>
+                                    <p>+7(902)930-89-47</p>
+                                </li>
                             </ul>
                         </div>
                         {/*column 2*/}
@@ -64,7 +76,7 @@ export default Footer
 
 const FooterContainer = styled.footer`
     .footer-middle {
-        background: var(--mainDark);
+        background: black;
         padding-top: 3rem;
         color: var(--mainWhite);
     }
